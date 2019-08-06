@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--В ниже расположенном xml тэге/элементе явно указаны xml namespace и ссылка на XSD схему - все это носит информационный характер, используется только в design time,
+     при работе над форматом сообщений, например, в каком либо GUI инструменте - IDE.
+     В реальных сообщения отправляемых действующей системой это содержимое будет отсутствовать-->
+<Card Code="141265769366740" FirmCode="141274359277273" IsLocal="true" LocalityVerification="false" IsPromotional="true" Type="POS" Name="2ГИС, городской информационный сервис" CreationDate="2003-01-23T10:56:57" BranchCode="1" CountryCode="1" IsHidden="false" IsArchived="false" CreationBy="fa1210a6-900e-4db1-a88b-e579f2493497" CheckedDate="2017-01-09T02:28:04.477" CheckingBy="60323e6a-9877-4d84-ba1c-428208fc3ee0" IsDeleted="false" IsHeadCard="false"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./../Schema/flowCards.Card.xsd">
+  <Address AddressCode="141669496272111" CityCode="1267230100684807" StreetCode="1267449144021838" BuildingCode="141373143572328" Building="7" ReferencePoint="14 этаж" PromotionalReferencePoint="14 этаж" EntranceCode="141781165413323" />
+  <Contacts>
+    <Phone Value="3630404" Description="многоканальный" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001011225801" Type="Landline" CountryCode="1" ZoneCode="5" FormatCode="90113" Alias="+7 (383) 363-04-04" />
+    <Phone Value="8002003600" Description="бесплатная единая справочная" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001017207891" Type="Federal" NationalPrefixCode="1" FormatCode="90241" Alias="8-800-2003-600" />
+    <Phone Value="3633298" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001011225802" Type="Landline" CountryCode="1" ZoneCode="5" FormatCode="90113" Alias="+7 (383) 363-32-98" />
+    <Web Value="www.2gis.ru" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001011225803" />
+    <Web Value="nsk.2gis.ru/firm/add-info/" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001011225805" Alias="Анкета бесплатного размещения" />
+    <Web Value="info.2gis.ru" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016352718" />
+    <Email Value="inf@nsk.2gis.ru" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001011225804" />
+    <Email Value="mrsnsk2011@gmail.com" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="true" Code="70000001015263682" />
+    <VKontakte Value="vk.com/club486955" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016066258" />
+    <Twitter Value="twitter.com/@2gis" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016066257" />
+    <Facebook Value="facebook.com/2GISRussia" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001026739759" />
+    <Web Value="reklama.2gis.ru/?utm_source=pc&amp;utm_medium=products&amp;utm_campaign=2gis_card_place_advertisment" IsPromotional="false" IsHidden="true" IsArchived="true" NotPublish="false" Code="70000001025584248" Alias="Разместить рекламу в 2ГИС" />
+    <Facebook Value="facebook.com/2gis.ru" IsPromotional="false" IsHidden="true" IsArchived="true" NotPublish="false" Code="70000001016066256" />
+    <WhatsApp Value="wa.me/79232561945" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016066266" />
+    <Viber Value="viber://add?number=79039807777" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016066276" />
+    <Telegram Value="t.me/JohnSmith" IsPromotional="false" IsHidden="false" IsArchived="false" NotPublish="false" Code="70000001016066286" />
+  </Contacts>
+  <Rubrics>
+    <Rubric Code="1060" IsPromotional="false" IsPrimary="true" />
+    <Rubric Code="322" IsPromotional="false" IsPrimary="true" />
+  </Rubrics>
+  <Schedules>
+    <Schedule>
+      <Day From="09:00:00" To="18:00:00" Label="Mon">
+        <Break From="13:00:00" To="13:45:00" />
+        <Break From="16:15:00" To="16:45:00" />
+      </Day>
+      <Day From="09:00:00" To="18:00:00" Label="Tue" />
+      <Day From="09:00:00" To="18:00:00" Label="Wed" />
+      <Day From="09:00:00" To="18:00:00" Label="Thu" />
+      <Day From="09:00:00" To="18:00:00" Label="Fri" />
+      <Day Label="Sat" />
+      <Day Label="Sun" />
+    </Schedule>
+  </Schedules>
+  <Fields>
+    <TextField Value="2ГИС" Code="BrandName" />
+    <TextField Value="городской информационный сервис" Code="NameDescription" />
+    <TextField Value="2 ГИС; Два ГИС; ДубльГИС; Дубль ГИС; Two GIS; Double GIS; DoubleGIS" Code="AlternativeName" />
+    <TextField Value="14" Code="Floor" />
+    <TextField Value="5404253990" Code="INN" />
+    <BoolField Value="true" Code="FlampLink" />
+    <BoolField Value="false" Code="LocalityVerification" />
+    <ReferenceListField ReferenceCode="PaymentMethod" Code="PaymentMethod">
+      <Items>
+        <Item Code="7" />
+      </Items>
+    </ReferenceListField>
+    <ReferenceField ReferenceCode="NumberOfEmployees" Value="1" Code="NumberOfEmployees" />
+    <BoolField Value="false" Comment="" Code="WarmingClient" />
+    <ReferenceField ReferenceCode="IsToLicense" Value="2" Code="ToBeLicensing" />
+    <ReferenceField ReferenceCode="LicenseConfirmation" Value="1" Comment="" Code="RefToLicense" />
+    <ReferenceField ReferenceCode="UpdateSource" Value="23001" Code="UpdateSource" />
+    <TextField Value="15" Code="Office" />
+    <DateField Code="some_date_field" Value="2013-06-14T09:35:22.54" />
+    <DecimalField Code="Bill" Value="500" />
+    <LongField Code="some_long_field" Value="165048062135" />
+    <LongRangeField Code="some_long_range_field" From="15" To="4842187469" />
+    <DateRangeField Code="date_range_field" From="2013-01-10T09:35:22.54" To="2013-06-10T09:35:22.54" />
+    <DecimalRangeField Code="business_lunch_cost" From="120" To="210" />
+    <TimeRangeField Code="business_lunch_time" From="12:00:00" To="16:00:00" Value="12:00-16:00" />
+  </Fields>
+  <AdditionalFields>
+    <AddBoolField Code="70000201006747951" Value="false" />
+    <AddLongField Code="70000201006747952" Value="165048062135" />
+    <AddDecimalField Code="70000201006747959" Value="1650480.62135" />
+    <AddTextField Code="70000201006747953" Value="SomeValue" />
+    <AddLongRangeField Code="70000201006747955" From="120" To="210" />
+    <AddTimeRangeField Code="70000201006747956" From="12:00:00" To="16:00:00" Value="12:00-16:00" />
+  </AdditionalFields>
+</Card>
