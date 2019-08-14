@@ -41,9 +41,6 @@ namespace Ex1
 
                 try
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Считываем файл...");
-                    Console.WriteLine("Числа из файла:");
                     using (var sr = new StreamReader(fileForLecture10))
                     {
                         Console.WriteLine(sr.ReadToEnd());
