@@ -3,9 +3,9 @@ using System.Xml.Linq;
 
 namespace Ex2
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             //Считать из файла flowCards.Card
             //файл лежит: ...\Ex1\bin\Debug\netcoreapp2.2\Card.xml
@@ -20,22 +20,23 @@ namespace Ex2
             var cardWithNotPromotionalContacts = new XElement("Card");
 
             var xDoc = new XmlDocument();
-            xDoc.Load("Card.xml");
+            xDoc.Load(@"..\..\..\Card.xml");
+
             var xRoot = xDoc.DocumentElement;
 
-            foreach (XmlNode xnode in xRoot)
-                if (xnode.Name == "Contacts")
-                    foreach (XmlNode childnode in xnode.ChildNodes)
-                        if (childnode.Attributes.Count > 0)
+            foreach (XmlNode xNode in xRoot)
+                if (xNode.Name == "Contacts")
+                    foreach (XmlNode childNode in xNode.ChildNodes)
+                        if (childNode.Attributes.Count > 0)
                         {
-                            var attr = childnode.Attributes.GetNamedItem("IsPromotional");
+                            var attr = childNode.Attributes.GetNamedItem("IsPromotional");
                             if (attr.InnerText == "true")
                             {
-                                var contact = new XElement($"{childnode.Name}");
+                                var contact = new XElement($"{childNode.Name}");
                                 var contactValue = new XAttribute("Contact_Value",
-                                    $"{childnode.Attributes.GetNamedItem("Value")?.Value}");
+                                    $"{childNode.Attributes.GetNamedItem("Value")?.Value}");
                                 var description = new XAttribute("Description",
-                                    $"{childnode.Attributes.GetNamedItem("Description")?.Value}");
+                                    $"{childNode.Attributes.GetNamedItem("Description")?.Value}");
 
                                 contact.Add(contactValue);
                                 contact.Add(description);
@@ -45,11 +46,11 @@ namespace Ex2
 
                             if (attr.InnerText == "false")
                             {
-                                var contact = new XElement($"{childnode.Name}");
+                                var contact = new XElement($"{childNode.Name}");
                                 var contactValue = new XAttribute("Contact_Value",
-                                    $"{childnode.Attributes.GetNamedItem("Value")?.Value}");
+                                    $"{childNode.Attributes.GetNamedItem("Value")?.Value}");
                                 var description = new XAttribute("Description",
-                                    $"{childnode.Attributes.GetNamedItem("Description")?.Value}");
+                                    $"{childNode.Attributes.GetNamedItem("Description")?.Value}");
 
                                 contact.Add(contactValue);
                                 contact.Add(description);
@@ -59,10 +60,10 @@ namespace Ex2
                         }
 
             promotionalContacts.Add(cardWithPromotionalContacts);
-            promotionalContacts.Save("PromotionalContacts.xml");
+            promotionalContacts.Save(@"..\..\..\PromotionalContacts.xml");
 
             notPromotionalContacts.Add(cardWithNotPromotionalContacts);
-            notPromotionalContacts.Save("NotPromotionalContacts.xml");
+            notPromotionalContacts.Save(@"..\..\..\NotPromotionalContacts.xml");
         }
     }
 }
